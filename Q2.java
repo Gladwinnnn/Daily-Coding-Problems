@@ -4,20 +4,35 @@
 import java.util.*;
 
 public class Q2{
+    // static ArrayList<Integer> checkMethod(int[] intArray){
+    //     ArrayList<Integer> resultArray= new ArrayList<Integer>();
+    //     for (int i = 0; i < intArray.length; i++){
+    //         int result = 1;
+    //         int placeHolder = intArray[i];
+    //         for (int j = 0; j < intArray.length; j++){
+    //             if (intArray[j] != placeHolder){
+    //                 result *= intArray[j];
+    //             }
+    //         }
+    //         resultArray.add(result);
+    //     }
+    //     return resultArray;
+    // }
     static ArrayList<Integer> checkMethod(int[] intArray){
         ArrayList<Integer> resultArray= new ArrayList<Integer>();
-        for (int i = 0; i < intArray.length; i++){
-            int result = 1;
-            int placeHolder = intArray[i];
-            for (int j = 0; j < intArray.length; j++){
-                if (intArray[j] != placeHolder){
-                    result *= intArray[j];
-                }
-            }
-            resultArray.add(result);
+
+        int placeHolder = 1;
+        for (int i = 0; i < intArray.length; i ++){
+            placeHolder *= intArray[i];
+        }
+
+        int result = placeHolder;
+        for (int i = 0; i <intArray.length; i++){
+            resultArray.add(result/intArray[i]);
         }
         return resultArray;
     }
+
     public static void main(String[] args){
         int[] intArray = {1, 2, 3, 4, 5};
         System.out.print(checkMethod(intArray));
