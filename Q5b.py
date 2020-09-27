@@ -8,11 +8,8 @@
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        answer_list = []
         for i in range(0,len(nums)):
             if (target - nums[i] in nums and i != nums.index(target - nums[i])):
-                answer_list.append(i)
-                answer_list.append(nums.index(target - nums[i]))
-                return answer_list
+                return [i, nums.index(target - nums[i])]
             
             
