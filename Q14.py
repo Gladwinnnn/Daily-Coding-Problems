@@ -3,8 +3,8 @@ def merge_sort(dummy):
         half = len(dummy)//2
         left = merge_sort(dummy[:half])
         right = merge_sort(dummy[half:])
-        print(f"left:{left}")
-        print(f"right:{right}")
+        # print(f"left:{left}")
+        # print(f"right:{right}")
         values = []
 
         while len(left) > 0 and len(right) > 0:
@@ -18,8 +18,9 @@ def merge_sort(dummy):
             values.append(elements)
         for elements in right:
             values.append(elements)
-        print(f"values:{values}")
+        # print(f"values:{values}")
+        return values
     return dummy
 
-print(merge_sort([41,31,93]))
+print(merge_sort([41,31,93,1,321,4,2]))
 
