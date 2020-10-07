@@ -26,7 +26,6 @@ print('----------------')
 bottom_up = {}
 bottom_up[0] = 0
 def fibonacci_bottomup(n):
-    # some code here
     for i in range(1,n+1):
         if i <= 2:
             result = 1
