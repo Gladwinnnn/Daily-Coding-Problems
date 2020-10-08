@@ -4,7 +4,7 @@ def binary_search(dummy,target):
     lower = 0
     upper = len(dummy) - 1
     middle = (upper + lower) // 2
-    while lower < upper:
+    while lower <= upper:
         if dummy[middle] == target:
             return middle
         elif dummy[middle] > target:
