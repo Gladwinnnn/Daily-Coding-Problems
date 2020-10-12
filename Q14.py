@@ -22,5 +22,7 @@ def merge_sort(dummy):
         return values
     return dummy
 
+
 print(merge_sort([41,31,93,1,321,4,2]))
+
 
