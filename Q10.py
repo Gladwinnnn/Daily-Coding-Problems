@@ -16,4 +16,4 @@ def decode(dummy):
     return len(placeHolder) + len(placeHolder2)
 
 print(decode(data))
-print(decode("0"))
+print(decode("226"))
